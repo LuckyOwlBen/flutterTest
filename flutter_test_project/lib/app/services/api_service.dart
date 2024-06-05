@@ -1,9 +1,10 @@
 import 'package:chopper/chopper.dart';
 
-@ChopperApi(baseUrl: '/posts')
+@ChopperApi(
+    baseUrl: 'https://dl.dropboxusercontent.com/s/2iodh4g0eortkl/facts.json')
 abstract class ApiService extends ChopperService {
-  @Get(path: '/{id}')
-  Future<Response<FeedResponse>> getPostById(@Path() int id);
+  @Get(path: '')
+  Future<Response<FeedResponse>> getData();
 }
 
 class FeedResponse {
