@@ -20,14 +20,14 @@ class MainViewState extends State<MainView> {
             title: Text(apiService.feedData?.title ?? ''),
           ),
           body: ListView.builder(
-            itemCount: apiService.feedData?.images.length ?? 0,
+            itemCount: apiService.feedData?.rows.length ?? 0,
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text(apiService.feedData?.images[index].title ?? ''),
+                title: Text(apiService.feedData?.rows[index].title ?? ''),
                 subtitle:
-                    Text(apiService.feedData?.images[index].description ?? ''),
+                    Text(apiService.feedData?.rows[index].description ?? ''),
                 leading: Image.network(
-                    apiService.feedData?.images[index].imageHref ?? ''),
+                    apiService.feedData?.rows[index].imageHref ?? ''),
               );
             },
           ),
